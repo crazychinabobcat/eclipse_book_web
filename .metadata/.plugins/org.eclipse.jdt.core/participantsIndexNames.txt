@@ -1,0 +1,21 @@
+INDEX VERSION 1.131
+F:\maven_eclipse_book_web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2143151889.index
+\maven-demo\src\main\java
+F:\maven_eclipse_book_web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2708647340.index
+\RedisWebServer\src\main\resources
+F:\maven_eclipse_book_web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4236839206.index
+\RedisWebServer\src\main\resources
+F:\maven_eclipse_book_web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\670267439.index
+\RedisWebServer\src\main\resources
+F:\maven_eclipse_book_web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3246626470.index
+\RedisWebServer\src\main\resources
+F:\maven_eclipse_book_web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\809638933.index
+\maven-demo\src\main\java
+F:\maven_eclipse_book_web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2466084948.index
+\maven-demo\src\main\java
+F:\maven_eclipse_book_web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2951997346.index
+\RedisWebServer\src\main\resources
+F:\maven_eclipse_book_web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\939055063.index
+\maven-demo\src\main\java
+F:\maven_eclipse_book_web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4258300617.index
+\maven-demo\src\main\java
