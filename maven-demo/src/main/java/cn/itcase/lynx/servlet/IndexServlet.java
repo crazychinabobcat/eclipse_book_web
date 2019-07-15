@@ -7,13 +7,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import cn.itcase.lynx.base.BaseServlet;
+
 /**
  * Servlet implementation class IndexServlet
  */
 @WebServlet("/IndexServlet")
-public class IndexServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
+public class IndexServlet extends BaseServlet {
+	
+
+	
+       //跳转到注册页面
+  public String userRegeist(HttpServletRequest req, HttpServletResponse resp) {
+	  return "/register.jsp";
+  }
   
 
 }

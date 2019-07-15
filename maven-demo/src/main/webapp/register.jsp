@@ -1,4 +1,5 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -11,9 +12,81 @@
 <script type="text/javascript">
 	function changeImage() {
 
-		document.getElementById("img").src = "${pageContext.request.contextPath}/imageCode?time="
+		document.getElementById("img").src = "${pageContext.request.contextPath}/CheckCodeServlet?time="
 				+ new Date().getTime();
 	}
+	
+	
+	//验证码会员邮箱
+	function checkEmail(){	
+	 var email_Value = $("#email").val();
+	 var reg_Email =  /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+	 var flag = reg_Email.test(email_Value);
+	 if(flag){
+		 $("#email").css("border","1px solid  blue");
+	 }else{
+		 alert("邮箱非法，重新输入")
+	 }
+	}
+	
+	
+	//验证用户密码
+	function checkPassword(){
+	var user_Password_Val = $("#password").val();
+	var reg_user_Password = /^\w{8,20}$/;
+	var flag = reg_user_Password.test(reg_user_Password);
+	if(flag){
+		$("#password").css("border","1px solid blue");
+	}else{
+		alert("用户名最低8位");
+	}
+	}
+	
+	//验证用户联系电话
+	
+	function checkTelePhone(){
+		var user_Telephone = $("#telephone").val();
+		var reg_user_Telephone = /^1[34578]\d{9}$/;
+		var flag = user_Telephone.test(reg_user_Telephone);
+		if(flag){
+			$("#user_Telephone").css("border","1px solid blue" );
+		}else{
+			alert("输入电话号码不对")
+		}
+	}
+	
+	//验证用户校验码
+	function checkCheckCode(){
+		
+		var input_CheckCode = $("#checkcode").val();
+		var reg_input_CheckCode =  /\S/;
+		var flag  = input_CheckCode.test(reg_input_CheckCode);
+		if(flag){
+			$("#checkcode").css("border","1px solid blue");
+		}else{
+			alert("验证码不能为空");
+		}
+	}
+	
+	//验证两次密码输入是否一样
+	function checkInputPassword(){
+		var repassword_Val = $("#repassword").val;
+		var user_Password_Val = $("#password").val();
+		if(repassword_Val.equles(user_Password_Val)){
+			$("#repassword").css("border","1px solid blue");
+		}else{
+			alert("两次输入的密码不一样");
+		}
+		
+	}
+	
+	
+	//登录页面前端js验证
+function myFunction(){
+	alert("输入电话号码不对");
+	
+}
+	
 </script>
 </head>
 
@@ -35,8 +108,7 @@
 							<tr>
 								<td style="text-align:right; width:20%">会员邮箱：</td>
 								<td style="width:40%">
-								<input type="text" class="textinput"
-									name="email" /></td>
+								<input type="text" class="textinput" name="email" οnblur="myFunction()"  id="email"/></td>
 								<td><font color="#999999">请输入有效的邮箱地址</font></td>
 							</tr>
 							<tr>
@@ -84,14 +156,14 @@
 						<table width="80%" border="0" cellspacing="2" class="upline">
 							<tr>
 								<td style="text-align:right; width:20%">输入校验码：</td>
-								<td style="width:50%"><input type="text" class="textinput" />
+								<td style="width:50%"><input type="text" class="textinput" name="checkcode" />
 								</td>
 								<td>&nbsp;</td>
 							</tr>
 							<tr>
 								<td style="text-align:right;width:20%;">&nbsp;</td>
 								<td colspan="2" style="width:50%"><img
-									src="${pageContext.request.contextPath}/imageCode" width="180"
+									src="${pageContext.request.contextPath}/CheckCodeServlet" width="180"
 									height="30" class="textinput" style="height:30px;" id="img" />&nbsp;&nbsp;
 									<a href="javascript:void(0);" onclick="changeImage()">看不清换一张</a>
 								</td>
@@ -132,4 +204,5 @@
 
 
 </body>
+
 </html>
